@@ -44,7 +44,7 @@ function Login() {
     }
 
     return (
-        <div className="flex min-h-screen items-center">
+        <div className="flex min-h-screen items-center px-2">
             <div className="text-white absolute top-4 left-4 flex text-xl items-center">
                 <span onClick={() => navigate("/")} className="text-[#d0caca] cursor-pointer">Главная</span>
                 <ChevronIcon />

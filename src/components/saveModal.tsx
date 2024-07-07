@@ -22,7 +22,7 @@ export function SaveModal({ setTodos }: any) {
         <>            
             <Button
                 onClick={handleOpen}
-                className="text-white py-0 w-[110px] bg-[#d1b03a] border hover:bg-[#4D4117] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-4xl px-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="text-white py-0 w-[60px] sm:w-[110px] bg-[#d1b03a] border hover:bg-[#4D4117] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-2xl sm:text-4xl px-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
                 +
             </Button>
