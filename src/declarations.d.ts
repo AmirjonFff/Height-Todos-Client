@@ -50,7 +50,8 @@ declare module "@material-tailwind/react" {
   export interface AvatarProps {
     src?: string;
     alt: string;
-    size: string;
+    size?: string;
+    className?: string;
   }
 
   export const Avatar: React.FC<AvatarProps>;

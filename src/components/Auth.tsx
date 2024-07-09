@@ -8,7 +8,7 @@ function Auth({ user }: { user: string | undefined }) {
     const navigate = useNavigate()
     return (
         <div className="flex justify-between items-center sm:px-10 mt-3">
-            <div className={`text-white font-bold text-3xl sm:text-4xl ${token && 'text-5xl'} flex gap-3 uppercase`}>
+            <div className={`text-white font-bold text-3xl sm:text-4xl ${token && 'text-3xl sm:text-5xl'} flex gap-3 uppercase`}>
                 <span className="text-[#4D4117]">To</span>
                 <span className="text-[#DFBD43]">Do</span>
                 <span>List</span>
