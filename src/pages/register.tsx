@@ -27,7 +27,7 @@ function Register() {
 
     const userRegistr = async () => {
         try {
-            const { data } = await axios.post('http://localhost:5000/' + 'registration',
+            const { data } = await axios.post('https://height-todos-api.onrender.com/' + 'registration',
                 {
                     username,
                     password
