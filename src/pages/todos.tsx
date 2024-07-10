@@ -19,7 +19,7 @@ function Todos() {
         if (token) {
             const AuthStr = 'Bearer ' + token;
             const headers = { 'Authorization': AuthStr };
-            axios.get('http://localhost:5000/users', { headers })
+            axios.get('https://height-todos-api.onrender.com/users', { headers })
                 .then(response => setUser(response.data.find((user: any) => user._id === getTokenId())));
         }
     }, [token])
@@ -28,8 +28,10 @@ function Todos() {
         getTodos(setTodos, search)
     }, [search])
 
-    const data = token ? todos.filter((el: Root) => el.userId === getTokenId()) : todos
+    const data = todos.filter((el: Root) => el.userId === getTokenId())
 
+    console.log(user);
+    
     return (
         <div className='max-w-[900px] m-auto px-3'>
             <Auth user={user?.username} />
