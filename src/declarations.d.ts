@@ -14,7 +14,7 @@ declare module "@material-tailwind/react" {
   export interface MenuProps {
     open?: boolean;
     placement: string;
-    handler?: any;
+    handler?: Dispatch<SetStateAction<boolean>>;
     children?: React.ReactNode;
   }
 
@@ -22,7 +22,7 @@ declare module "@material-tailwind/react" {
 
   export interface MenuListProps {
     open?: boolean;
-    handler?: any;
+    handler?: Dispatch<SetStateAction<boolean>>;
     children?: React.ReactNode;
     className: string;
   }
@@ -31,7 +31,7 @@ declare module "@material-tailwind/react" {
 
   export interface MenuItemProps {
     open?: boolean;
-    handler?: any;
+    handler?: Dispatch<SetStateAction<boolean>>;
     children?: React.ReactNode;
     onClick: React.MouseEventHandler<HTMLButtonElement>
     className: string;
@@ -41,7 +41,7 @@ declare module "@material-tailwind/react" {
 
   export interface MenuHandlerProps {
     open?: boolean;
-    handler?: any;
+    handler?: Dispatch<SetStateAction<boolean>>;
     children?: React.ReactNode;
   }
 
@@ -58,7 +58,7 @@ declare module "@material-tailwind/react" {
 
   export interface Input {
     label?: string | null;
-    onChange?: (e: React.any) => void;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     value?: string;
     size?: string
   }

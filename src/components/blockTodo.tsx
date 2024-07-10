@@ -14,7 +14,7 @@ function BlockTodo({ el, compTodos, handleTodos, delTodos, setTodos }: any) {
                 <div className="w-full h-[24px] sm:h-[30px] translate-y-1 overflow-hidden text-lg sm:text-2xl">
                     {el.comp ?
                         <span className="line-through overflow-hidden whitespace-nowrap text-overflow-ellipsis max-w-full">{el.title}</span>
-                        : <span className="">{el.title}</span>
+                        : <span className="line-through overflow-hidden whitespace-nowrap text-overflow-ellipsis max-w-full">{el.title}</span>
                     }
                 </div>
             </div>

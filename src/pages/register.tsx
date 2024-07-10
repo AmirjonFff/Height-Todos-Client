@@ -65,11 +65,11 @@ function Register() {
                     <Typography className="-mb-2" variant="h6">
                         Имя
                     </Typography>
-                    <Input label="User Name" size="lg" value={username} onChange={(e: any) => setUsername(e.target.value)} />
+                    <Input label="User Name" size="lg" value={username} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUsername(e.target.value)} />
                     <Typography className="-mb-2" variant="h6">
                         Пароль
                     </Typography>
-                    <Input label="Password" size="lg" value={password} onChange={(e: any) => setPassword(e.target.value)} />
+                    <Input label="Password" size="lg" value={password} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)} />
                 </CardBody>
                 <CardFooter className="pt-0">
                     <Button className="w-full" variant="gradient"
