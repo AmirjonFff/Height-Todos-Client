@@ -10,8 +10,8 @@ export interface Root {
     title: string
     comp: boolean
     __v: number
-    createDate: string
-    finishDate?: string
+    createDate: Date
+    finishDate: Date
 }
 
 export const getTodos = async (setTodos: any, search?: string) => {

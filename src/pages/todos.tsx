@@ -31,7 +31,7 @@ function Todos() {
     const data = todos.filter((el: Root) => el.userId === getTokenId())
 
     console.log(user);
-    
+
     return (
         <div className='max-w-[900px] m-auto px-3'>
             <Auth user={user?.username} />
@@ -43,8 +43,9 @@ function Todos() {
             <div className='text-white text-xl sm:text-2xl mb-2 sm:mb-4 -mt-2'>Задачи, которые нужно сделать</div>
             <div className='flex flex-col gap-4'>
                 {data.filter((el: Root) => el.comp === false).map((el: Root) =>
-                    <BlockTodo el={el}
+                    <BlockTodo
                         key={el._id}
+                        el={el}
                         setTodos={setTodos}
                         compTodos={() => compTodos(el._id, setTodos)}
                         delTodos={() => delTodos(el._id, setTodos)}
@@ -54,8 +55,9 @@ function Todos() {
             <div className='text-white text-xl sm:text-2xl mb-2 sm:mb-4 mt-4 sm:mt-7'>Сделанный</div>
             <div className='flex flex-col gap-4'>
                 {data.filter((el: Root) => el.comp === true).map((el: Root) =>
-                    <BlockTodo el={el}
+                    <BlockTodo
                         key={el._id}
+                        el={el}
                         setTodos={setTodos}
                         compTodos={() => compTodos(el._id, setTodos)}
                         delTodos={() => delTodos(el._id, setTodos)}

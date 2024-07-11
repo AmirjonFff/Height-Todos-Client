@@ -32,7 +32,7 @@ export default function Example({ newDate, day }: { newDate: any, day?: string }
     return (
         <div>
             <Popover placement="bottom">
-                <PopoverHandler>
+                <PopoverHandler className="!min-w-[100px]">
                     <Input
                         label={"Выберите дату"}
                         onChange={() => null}

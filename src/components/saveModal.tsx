@@ -37,7 +37,7 @@ export function SaveModal({ setTodos }: any) {
                         <Typography variant="h4" color="blue-gray">
                             Создать задачу
                         </Typography>
-                        <div className="flex items-center justify-between gap-1 text-lg">
+                        <div className="flex items-center justify-between gap-1 text-xs sm:text-lg">
                             Сделать до: <Example newDate={newDate} />
                         </div>
                         <div className="-ml-2.5 -mt-4">
