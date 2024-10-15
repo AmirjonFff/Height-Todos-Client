@@ -30,17 +30,15 @@ function Todos() {
 
     const data = todos.filter((el: Root) => el.userId === getTokenId())
 
-    console.log(user);
-
     return (
         <div className='max-w-[900px] m-auto px-3'>
             <Auth user={user?.username} />
             <Calendar />
-            <div className='flex gap-3 sm:gap-4 mt-2 sm:mt-5 mb-5 sm:mb-8'>
+            <div className='flex gap-3 mt-2 mb-5 sm:gap-4 sm:mt-5 sm:mb-8'>
                 <Search setSearch={setSearch} />
                 <SaveModal setTodos={setTodos} />
             </div>
-            <div className='text-white text-xl sm:text-2xl mb-2 sm:mb-4 -mt-2'>Задачи, которые нужно сделать</div>
+            <div className='mb-2 -mt-2 text-xl text-white sm:text-2xl sm:mb-4'>Задачи, которые нужно сделать</div>
             <div className='flex flex-col gap-4'>
                 {data.filter((el: Root) => el.comp === false).map((el: Root) =>
                     <BlockTodo
@@ -52,7 +50,7 @@ function Todos() {
                     />
                 )}
             </div>
-            <div className='text-white text-xl sm:text-2xl mb-2 sm:mb-4 mt-4 sm:mt-7'>Сделанный</div>
+            <div className='mt-4 mb-2 text-xl text-white sm:text-2xl sm:mb-4 sm:mt-7'>Сделанный</div>
             <div className='flex flex-col gap-4'>
                 {data.filter((el: Root) => el.comp === true).map((el: Root) =>
                     <BlockTodo
